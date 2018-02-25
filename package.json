@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "MONGO_URL=mongodb://127.0.0.1:27017/hackoverflow node index.js"
+    "start": "node index.js"
   },
   "author": "Mohammed Ajmal Siddiqui <ajmalsiddiqui21@gmail.com>",
   "license": "ISC",
