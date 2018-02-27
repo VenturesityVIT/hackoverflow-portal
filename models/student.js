@@ -32,13 +32,11 @@ const studentSchema = Schema({
 	},
 
 	github: {
-		type: String,
-		unique: true
+		type: String
 	},
 
 	linkedin: {
-		type: String,
-		unique: true
+		type: String
 	},
 
 	skills: {
