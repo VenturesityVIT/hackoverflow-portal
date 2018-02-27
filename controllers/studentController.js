@@ -1,5 +1,7 @@
 const Student = require('../models/student');
 
+const mailer = require('../util/index').mailer;
+
 module.exports = {
 	// POST request to add new student
 	'newStudent': (req, res) => {
@@ -20,10 +22,17 @@ module.exports = {
 				message: 'Failed to insert data',
 				info: err
 			});
-			res.status(200).json({
-				status: 200,
-				message: 'Sucessfully added new user',
-				info: newStudent
+			mailer.send(req.body.email, (err, info) => {
+				if(err) return res.status(200).json({
+					status: 400,
+					message: 'Failed to send email',
+					info: err
+				});
+				res.status(200).json({
+					status: 200,
+					message: 'Sucessfully added new user',
+					info: newStudent
+				});
 			});
 		});
 	},

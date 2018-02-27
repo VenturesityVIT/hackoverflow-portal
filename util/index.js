@@ -1,5 +1,7 @@
 const cors = require('./cors');
+const mailer = require('./mailer');
 
 module.exports = {
-	'cors': cors
+	'cors': cors,
+	'mailer': mailer
 }
