@@ -4,8 +4,8 @@ module.exports = {
 	port: process.env.PORT || '8000',
 	enableCors: true,
 	mailer: {
-		email: process.env.MAIL_ID || 'ajmalsiddiqui414@gmail.com',
-		pass: process.env.MAIL_PASS || 'alfasierra',
+		email: process.env.MAIL_ID,
+		pass: process.env.MAIL_PASS,
 		service: 'Gmail',
 		from: 'Team HackOverflow',
 		subject: 'Registration Confirmation',
